@@ -16,7 +16,7 @@ Sanity is a system for getting back that confidence you had in production before
 ### what are the things I want to ensure:
 1. that some code is called
 2. as many times as i expect
-3. that it returns what I expect
+3. that it received and returns what I expect
 4. that something changes as a result of it running
   a. I'll need both pre and post numbers
   b. or a guaranteed way to call them and inspect their difference
@@ -44,3 +44,19 @@ for scientist there was a name of an experiment, pre and post conditions (values
 can I use a blob of json fired off?
 
 ### User Stories
+As a Catalog engineer, I want to make sure the prices I get from inventory files end up as the prices in the database.
+
+As a Catalog engineer, I want to make sure that ever item I think I'm reindexing gets reindexed. 
+
+### Challenges
+
+#### How is this any different from just logging things? What's better?
+1. automate checking so you don't have to
+2. wires it all together. it's not really enough to log X over here and Y over here and be done (why??)
+3. automatic logging of data makes it easy to visual and track over time
+4. gives structure for how to tie checks together
+
+## Inspiration
+clojure/spec
+rspec
+github/scientist
